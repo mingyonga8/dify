@@ -16,6 +16,8 @@ class WebscraperProvider(BuiltinToolProviderController):
                 user_id='',
                 tool_parameters={
                     'url': 'https://www.google.com',
+                    'question': '建设背景',
+                    'kb_id': '121212',
                     'user_agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
                 },
             )
