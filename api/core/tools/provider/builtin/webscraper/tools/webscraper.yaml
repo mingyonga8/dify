@@ -58,3 +58,102 @@ parameters:
           en_US: 'No'
           zh_Hans: 否
     default: 'false'
+  - name: similarity_threshold
+    type: string
+    required: false
+    label:
+      en_US: Similarity Threshold
+      zh_Hans: 相似度阈值
+    human_description:
+      en_US: Threshold for similarity comparison.
+      zh_Hans: 相似度比较的阈值。
+    form: llm
+    default: 0.2
+  - name: vector_similarity_weight
+    type: string
+    required: false
+    label:
+      en_US: Vector Similarity Weight
+      zh_Hans: 向量相似度权重
+    human_description:
+      en_US: Weight for vector similarity.
+      zh_Hans: 向量相似度的权重。
+    form: llm
+    default: 0.3
+  - name: rerank_id
+    type: string
+    required: false
+    label:
+      en_US: Rerank ID
+      zh_Hans: 重排序ID
+    human_description:
+      en_US: ID for reranking.
+      zh_Hans: 重排序的ID。
+    form: llm
+    default: "BAAI/bge-reranker-v2-m3"
+  - name: question
+    type: string
+    required: true
+    label:
+      en_US: Question
+      zh_Hans: 问题
+    human_description:
+      en_US: Question to be answered.
+      zh_Hans: 要回答的问题。
+    form: llm
+    default: ""
+  - name: top_k
+    type: integer
+    required: false
+    label:
+      en_US: Top K
+      zh_Hans: 前K个
+    human_description:
+      en_US: Number of top results to return.
+      zh_Hans: 返回前K个结果的数量。
+    form: llm
+    default: 1024
+  - name: doc_ids
+    type: array
+    required: false
+    label:
+      en_US: Document IDs
+      zh_Hans: 文档ID
+    human_description:
+      en_US: List of document IDs.
+      zh_Hans: 文档ID列表。
+    form: llm
+    default: []
+  - name: kb_id
+    type: string
+    required: true
+    label:
+      en_US: Knowledge Base ID
+      zh_Hans: 知识库ID
+    human_description:
+      en_US: ID of the knowledge base.
+      zh_Hans: 知识库的ID。
+    form: llm
+    default: "049075cc5ace11ef8e710242ac150006"
+  - name: page
+    type: integer
+    required: false
+    label:
+      en_US: Page
+      zh_Hans: 页码
+    human_description:
+      en_US: Page number for pagination.
+      zh_Hans: 分页的页码。
+    form: llm
+    default: 1
+  - name: size
+    type: integer
+    required: false
+    label:
+      en_US: Size
+      zh_Hans: 大小
+    human_description:
+      en_US: Number of items per page.
+      zh_Hans: 每页的项目数量。
+    form: llm
+    default: 10
